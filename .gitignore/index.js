@@ -41,7 +41,7 @@ bot.on("message", async function (message) {
 
     var member = message.member;
 
-    var roledev = member.guild.roles.find("name", "💻Développeur💻")
+    var roledev = member.guild.roles.find("name", "👨🏻‍💻Développeur👨🏻‍💻")
 
     var modlog = member.guild.channels.find("name", "🤖bot-logs🤖")
 
@@ -84,7 +84,7 @@ bot.on("message", async function (message) {
     .setColor("#3333cc")
     .setTimestamp()
     .setAuthor(message.author.username, message.author.avatarURL)
-    .setDescription(member.toString() + " est désormais ``💻Développeur💻``")
+    .setDescription(member.toString() + " est désormais ``👨🏻‍💻Développeur👨🏻‍💻``")
     member.guild.channels.find("name", "🤖bot-logs🤖").send(addroledev_embed);
     member.addRole(roledev)
     message.channel.send(member.toString() + " est bien devenue Développeur :white_check_mark: !")
@@ -97,7 +97,7 @@ bot.on("message", async function (message) {
     .setColor("#3333cc")
     .setTimestamp()
     .setAuthor(message.author.username, message.author.avatarURL)
-    .setDescription(member.toString() + " n'est plus ``💻Développeur💻``")
+    .setDescription(member.toString() + " n'est plus ``👨🏻‍💻Développeur👨🏻‍💻``")
     member.guild.channels.find("name", "🤖bot-logs🤖").send(rroledev_embed);
     member.removeRole(roledev)
     message.channel.send(member.toString() + " n'est Développeur :white_check_mark: !")

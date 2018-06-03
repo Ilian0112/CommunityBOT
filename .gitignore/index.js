@@ -57,7 +57,7 @@ bot.on("message", async function (message) {
         .setDescription("Voici mes commandes !")
         .setTimestamp()
         message.delete()
-        message.channel.send(message.author.toString() + " **Je t'ai envoye un menu d'aide en MP, verifie qu'ils sont actives en provenance des membres du serveur.**")
+        message.channel.send(message.author.toString() + " **Je t'ai envoye un menu d'aide en MP, verifie qu'ils sont actifs en provenance des membres du serveur.**")
         member.createDM().then(channel => {
             return channel.send(help_embed)
                 }).catch(console.error)

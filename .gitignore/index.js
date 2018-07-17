@@ -8,13 +8,14 @@ var client = new Discord.Client();
 
 var bot = new Discord.Client();
 
-var version = "V.0.0.2"
+var version = "V.0.0.3"
 
 var servers = {};
 
 bot.on("ready", function () {
     bot.user.setActivity("CommunityBOT - " + PREFIX + "help")
     bot.user.setStatus("dnd")
+  //  bot.user.setAvatar("./Test.png")
     console.log("\nCommunityBOT - Connecté");
     console.log("\nInfos :\nNombre de serveurs : " + bot.guilds.size + "\nNombre d'utilisateurs : " + bot.users.size);
     var allservers = bot.guilds.array(); for (var i in allservers) {
@@ -111,11 +112,11 @@ bot.on("message", async function (message) {
             member.guild.channels.find("name", "staff-logs").send("**" + message.author.toString() + "** a utiliser ``" + PREFIX + "removeroledev `` dans le salon " + message.channel + " !\nProvenance du message : ``" + message.guild.name + "``");
         break;    
 
-  /*    case "majinfo":
+    /*    case "majinfo":
            if (message.author.id === "193092758267887616") {
                 var maj_embed = new Discord.RichEmbed()
                 .setAuthor("Update " + version)
-                    .addField("Footer Update,", "**Les footers des commandes on été changer **.")
+                    .addField("PDP,", "**J'ai désormais une pdp :D**.")
                 .setColor("#00FF6F")
                 .setFooter(version)
             bot.channels.findAll('name', 'bot-update').map(channel => channel.send(maj_embed));
